@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGIS Kota Bandung</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!--Leaflet css-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/> 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy
+    button.css"> 
+        <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet
+    fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' /> 
+        <link rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" /> 
+        <link rel="stylesheet" href="https://balladaniel.github.io/leaflet-dataclassification/leaflet
+    dataclassification.css" /> 
+
+    <!---Leaflet JavaScript-->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256
+    20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script> 
+        <script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script> 
+        <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet
+    fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script> 
+        <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js" 
+    charset="utf-8"></script> 
+        <script src="https://balladaniel.github.io/leaflet-dataclassification/leaflet
+    dataclassification.js"></script> 
+</head>
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-easybutton@2.4.0/src/easy-button.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css" />
+    
+    <!-- Font Awesome untuk ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-easybutton@2.4.0/src/easy-button.js"></script>
+    <script src="https://unpkg.com/leaflet.locatecontrol/dist/L.Control.Locate.min.js"></script>
+    <script src="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js"></script>
+  </head>
+<body>
+
+    <header id="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="asset/Logo-Pemerintah-Kota-Bandung-transparent.png" alt="Logo" width="100">
+                <h1>WebGIS Kota Bandung</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#hero-section">Beranda</a></li>
+                    <li><a href="#map-section">Peta</a></li>
+                    <li><a href="#data-section">Data</a></li>
+                    <li><a href="#author-section">Profil</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="hero-section" class="hero-section">
+        <div class="hero-content">
+            <h1>Eksplorasi Spasial Kota Bandung</h1>
+            <p>Situs eksplorasi WebGIS berbasis data spasial wilayah Kota Bandung</p>
+        </div>
+    </div>
+
+    <div id="map-section">
+        <h2>Jelajahi WebGIS Basis Data Spasial Kota Bandung</h2>
+        <div id="map"></div>
+    </div>
+
+    <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data WebGIS Kota Bandung</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<section class="data-section">
+    <h2>Data Tersedia</h2>
+    <div class="card-container">
+
+        <div class="card">
+            <img src="asset/adm_bandung.png" alt="Administrasi">
+            <div class="card-body">
+                <h3>Administrasi Kota Bandung</h3>
+                <p>Kota Bandung berbatasan langsung dengan Kota Cimahi, Kabupaten Bandung, dan Kabupaten Bandung Barat. Kota Bandung terdiri dari 30 Kecamatan dn 151 Kelurahan.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="asset/kependudukan_bandung.jpg" alt="Kependudukan">
+            <div class="card-body">
+                <h3>Kependudukan Kota Bandung</h3>
+                <p>Jumlah penduduk Kota Bandung sekitar 2,5 juta jiwa dengan kepadatan rata-rata ±14.950 jiwa per km².  Komposisi penduduk terbagi rata antara laki-laki dan perempuan, dengan mayoritas berada pada rentang usia produktif 15 sampai 64 tahun.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="asset/tenagakerja_bandung.jpg" alt="Ketenagakerjaan">
+            <div class="card-body">
+                <h3>Ketenagakerjaan Kota Bandung</h3>
+                <p>Ketenagakerjaan Kota Bandung menunjukkan bahwa mayoritas penduduk bekerja di sektor informal, perdagangan, dan jasa. Tingkat partisipasi angkatan kerja berada di angka sekitar 67%, dengan tingkat pengangguran terbuka sekitar 8%, lebih tinggi dibanding rata-rata nasional.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+</body>
+</html>
+
+    
+
+<div id="author-section">
+    <div class="author-content">
+        <h2>About Me</h2>
+        <img src="asset/akuw.JPG" alt="Foto Profil" class="profile-picture">
+        <div class="author-name">
+            <h3>Aisah Nurcahya</h3>
+        </div>
+        <p>Saya adalah Mahasiswa semester 4 Program Studi Sains Informasi Geografi, FPIPS, Universitas Pendidikan Indonesia. Dengan latar belakang jurusan saya tersebut, saya memiliki kemampuan di mengoperasikan berbagai hal di bidang geospasial. Seperti Penginderaan Jauh, Sistem Informasi Geografis (SIG), Survey dan Kartografi. Oleh karena itu disini saya membuat webgis mengenai informsi geospasial untuk Kota Bandung.</p>
+    </div>
+</div>
+
+    
+<div id="footer">
+    <div class="footer-content">
+        <h3>Contcat</h3>
+        <p>Email: aisahncahya@upi.edu</p>
+        <p>Telepon: 085794494771</p>
+    </div>
+</div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
+integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+<!-- Leaflet Plugin JS -->
+<script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
+<script src="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js"></script>
+<script src="https://balladaniel.github.io/leaflet-dataclassification/leaflet-dataclassification.js"></script>
+
+<!-- jQuery untuk AJAX requests -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Script utama -->
+<script src="js/script.js"></script>
+</body>
+</html>
+    
